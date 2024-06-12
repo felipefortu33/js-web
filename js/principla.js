@@ -16,13 +16,20 @@ pacientes.forEach(paciente => {
     var tdaltura = paciente.querySelector(".info-altura"); //td da tr
     var altura = tdaltura.textContent; // valor td
 
-    var imc = peso / (Math.pow(altura, 2));
+    var imc = calculaimc(peso, altura);
 
     var tdimc = paciente.querySelector(".info-imc");
     
-    tdimc.textContent = imc.toFixed(2);
+    tdimc.textContent = imc;
 });
     
+function calculaimc(peso, altura) {
+    var imc = 0;
+    
+    imc = peso / (Math.pow(altura, 2));
+
+    return imc.toFixed(2);
+}
 
 
 

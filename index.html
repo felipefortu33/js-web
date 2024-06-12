@@ -17,9 +17,14 @@
 			<h1>Aparecida Nutrição</h1>
 		</div>
 	</header>
+
 	<main>
 		<section class="container">
 			<h2>Meus pacientes</h2>
+			<div class="grupo">
+				<label for="filter">Filtre:</label>
+				<input type="text" id="filter" placeholder="Digite o nome do paciente">
+			</div>
 			<table>
 				<thead>
 					<tr>
@@ -71,10 +76,44 @@
 					</tr>
 				</tbody>
 			</table>
+			<button>Buscar Pacientes</button>
+		</section>
 
+
+		<section class="container">
+			<h2 id="titulo-form">Adicionar novo paciente</h2>
+			<form id="form-adiciona">
+
+
+				<div>
+					<label for="nome">Nome:</label>
+					<input type="text" id="nome" name="nome" class="campo" placeholder="digite o nome do seu paciente">
+				</div>
+
+				<div class="grupo">
+					<label for="peso">Peso:</label>
+					<input type="text" id="peso" name="peso" class="campo campo-medio"
+						placeholder="digite o peso do seu paciente">
+				</div>
+
+				<div class="grupo">
+					<label for="altura">Altura:</label>
+					<input type="text" id="altura" name="altura" class="campo campo-medio"
+						placeholder="digite a altura do seu paciente">
+				</div>
+
+				<div class="grupo">
+					<label for="gordura">Gordura Corporal(%):</label>
+					<input type="text" name="gordura" id="gordura" class="campo campo-medio"
+						placeholder="digite a porcentagem de gordura do seu paciente">
+				</div>
+				<button id="adicionar-paciente" class="bto bto-principal">Adicionar</button>
+
+			</form>
 		</section>
 	</main>
 	<script src="js/principla.js"></script>
+	<script src="js/form.js"></script>
 </body>
 
 </html>

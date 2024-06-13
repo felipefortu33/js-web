@@ -132,3 +132,27 @@ button[disabled=disabled], button:disabled {
 .campo-invalido{
 	border: 1px solid red;
 }
+
+.error-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+    color: #d8000c;
+}
+
+.error-list li {
+    background-color: #ffbaba;
+    border: 1px solid #d8000c;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.error-list li::before {
+    content: "⚠️";
+    margin-right: 10px;
+}
+

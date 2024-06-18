@@ -1,12 +1,22 @@
-var pacientes = document.querySelectorAll("#tabela-pacientes");
-
-pacientes.forEach(paciente => {
+document.querySelectorAll("#tabela-pacientes tr").forEach(row => {
+    const removeBtn = row.querySelector(".remove-btn");
     
-    paciente.addEventListener("dblclick", function (event) {
-        event.target.parentNode.classList.add("fadeOut");
-        setTimeout(() => {
-            event.target.parentNode.remove();
-        }, 1000);
-        
-    })
+    if (removeBtn) {
+        removeBtn.addEventListener("click", function () {
+            row.classList.add("fadeOut");
+            setTimeout(() => {
+                row.remove();
+            }, 1000);
+        });
+    }
 });
+
+// Adicionando estilo para a animação fadeOut
+const style = document.createElement('style');
+style.innerHTML = `
+.fadeOut {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+`;
+document.head.appendChild(style);

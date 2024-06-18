@@ -164,3 +164,27 @@ button[disabled=disabled], button:disabled {
 .invisivel{
 	display: none;
 }
+/* Estilo para centralizar a célula de remoção */
+.remove-cell {
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Estilo para o botão de remoção */
+.remove-btn {
+    background: none;
+    border: none;
+    color: red;
+    cursor: pointer;
+}
+
+.remove-btn .fa-trash {
+    pointer-events: none; /* Para evitar problemas de clique no ícone */
+}
+
+/* Animação de desvanecimento */
+.fadeOut {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+

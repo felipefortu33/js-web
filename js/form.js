@@ -82,3 +82,10 @@ function validaPaciente(paciente) {
 function calculaimc(peso, altura) {
     return (peso / (altura * altura)).toFixed(2);
 }
+
+function obtemPacienteNaTabela(paciente) {
+    var pacientetr = montatr(paciente);
+    var tabela = document.querySelector("#tabela-pacientes");
+    tabela.appendChild(pacientetr);
+    
+}
